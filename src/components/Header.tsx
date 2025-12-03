@@ -1,7 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const Header: React.FC = () => {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isThingsSubmenuOpen, setIsThingsSubmenuOpen] = useState(false);
+  const [isWhereSubmenuOpen, setIsWhereSubmenuOpen] = useState(false);
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
   return (
     <header className="fixed top-0 left-0 w-full bg-dark-bg text-dark-text z-50 shadow-lg">
       <div className="container mx-auto px-4 flex justify-between items-center py-4">
@@ -43,20 +51,97 @@ const Header: React.FC = () => {
         
         {/* Search and Buttons */}
         <div className="flex items-center space-x-4">
-          <button className="text-dark-text hover:text-primary-orange">
+          <button className="text-dark-text hover:text-primary-orange hidden md:block">
             {/* Search Icon */}
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
             </svg>
           </button>
-          <button className="btn-primary">
+          <button className="btn-primary hidden md:block">
             Explore
           </button>
-          <button className="btn-secondary">
+          <button className="btn-secondary hidden md:block">
             Sign In
+          </button>
+
+          {/* Hamburger Menu */}
+          <button
+            className="md:hidden text-dark-text hover:text-primary-orange"
+            onClick={toggleMobileMenu}
+          >
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
           </button>
         </div>
       </div>
+
+      {/* Mobile Menu */}
+      {isMobileMenuOpen && (
+        <div className="md:hidden bg-dark-bg text-dark-text shadow-lg">
+          <nav className="container mx-auto px-4 py-4">
+            <ul className="space-y-4">
+              <li><Link to="/" className="block text-dark-text hover:text-primary-orange transition-colors" onClick={toggleMobileMenu}>Home</Link></li>
+              <li>
+                <div 
+                  className="text-dark-text hover:text-primary-orange transition-colors cursor-pointer flex justify-between items-center w-full" 
+                  onClick={() => setIsThingsSubmenuOpen(!isThingsSubmenuOpen)}
+                >
+                  Things to do
+                  <svg className={`w-4 h-4 transition-transform ${isThingsSubmenuOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </div>
+                {isThingsSubmenuOpen && (
+                  <ul className="ml-4 mt-2 space-y-2">
+                    <li><Link to="/top-attractions" className="block text-gray-400 hover:text-primary-orange transition-colors" onClick={() => { toggleMobileMenu(); setIsThingsSubmenuOpen(false); }}>Top Attractions</Link></li>
+                    <li><Link to="/safaris" className="block text-gray-400 hover:text-primary-orange transition-colors" onClick={() => { toggleMobileMenu(); setIsThingsSubmenuOpen(false); }}>Safaris</Link></li>
+                    <li><Link to="/adventure-activities" className="block text-gray-400 hover:text-primary-orange transition-colors" onClick={() => { toggleMobileMenu(); setIsThingsSubmenuOpen(false); }}>Adventure Activities</Link></li>
+                    <li><Link to="/experiences" className="block text-gray-400 hover:text-primary-orange transition-colors" onClick={() => { toggleMobileMenu(); setIsThingsSubmenuOpen(false); }}>Experiences</Link></li>
+                    <li><Link to="/places-to-visit" className="block text-gray-400 hover:text-primary-orange transition-colors" onClick={() => { toggleMobileMenu(); setIsThingsSubmenuOpen(false); }}>Places to Visit</Link></li>
+                    <li><Link to="/real-estate" className="block text-gray-400 hover:text-primary-orange transition-colors" onClick={() => { toggleMobileMenu(); setIsThingsSubmenuOpen(false); }}>Real Estate</Link></li>
+                    <li><Link to="/startups" className="block text-gray-400 hover:text-primary-orange transition-colors" onClick={() => { toggleMobileMenu(); setIsThingsSubmenuOpen(false); }}>Startups</Link></li>
+                    <li><Link to="/accelerators" className="block text-gray-400 hover:text-primary-orange transition-colors" onClick={() => { toggleMobileMenu(); setIsThingsSubmenuOpen(false); }}>Accelerators</Link></li>
+                  </ul>
+                )}
+              </li>
+              <li>
+                <div 
+                  className="text-dark-text hover:text-primary-orange transition-colors cursor-pointer flex justify-between items-center w-full" 
+                  onClick={() => setIsWhereSubmenuOpen(!isWhereSubmenuOpen)}
+                >
+                  Where to Go
+                  <svg className={`w-4 h-4 transition-transform ${isWhereSubmenuOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </div>
+                {isWhereSubmenuOpen && (
+                  <ul className="ml-4 mt-2 space-y-2">
+                    <li><Link to="/hidden-gems" className="block text-gray-400 hover:text-primary-orange transition-colors" onClick={() => { toggleMobileMenu(); setIsWhereSubmenuOpen(false); }}>Hidden Gems</Link></li>
+                    <li><Link to="/art-and-music" className="block text-gray-400 hover:text-primary-orange transition-colors" onClick={() => { toggleMobileMenu(); setIsWhereSubmenuOpen(false); }}>Art, Music & Cultural Experiences</Link></li>
+                    <li><Link to="/history-and-education" className="block text-gray-400 hover:text-primary-orange transition-colors" onClick={() => { toggleMobileMenu(); setIsWhereSubmenuOpen(false); }}>History & Education</Link></li>
+                    <li><Link to="/wellness-and-relaxation" className="block text-gray-400 hover:text-primary-orange transition-colors" onClick={() => { toggleMobileMenu(); setIsWhereSubmenuOpen(false); }}>Wellness & Relaxation</Link></li>
+                    <li><Link to="/nightlife-and-entertainment" className="block text-gray-400 hover:text-primary-orange transition-colors" onClick={() => { toggleMobileMenu(); setIsWhereSubmenuOpen(false); }}>Nightlife & Entertainment</Link></li>
+                  </ul>
+                )}
+              </li>
+              <li><Link to="/events" className="block text-dark-text hover:text-primary-orange transition-colors" onClick={toggleMobileMenu}>Events</Link></li>
+              <li><Link to="/list-business" className="block text-dark-text hover:text-primary-orange transition-colors" onClick={toggleMobileMenu}>List Your Business</Link></li>
+              <li><Link to="/news" className="block text-dark-text hover:text-primary-orange transition-colors" onClick={toggleMobileMenu}>News</Link></li>
+              <li className="pt-4 border-t border-gray-700">
+                <div className="flex space-x-4">
+                  <button className="btn-primary flex-1">
+                    Explore
+                  </button>
+                  <button className="btn-secondary flex-1">
+                    Sign In
+                  </button>
+                </div>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      )}
     </header>
   );
 };

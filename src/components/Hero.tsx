@@ -17,7 +17,7 @@ const Hero: React.FC = () => {
         <p className="text-xl md:text-2xl mb-12 max-w-2xl">
           Welcome Nairobi, thriving hub for tourism, trade, and innovation.
         </p>
-        <div className="flex space-x-4">
+        <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
           <button className="btn-secondary">
             Partner with us
           </button>
