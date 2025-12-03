@@ -4,17 +4,17 @@ import AttractionCard from './AttractionCard';
 const EventsSection: React.FC = () => {
   const events = [
     {
-      image: 'https://source.unsplash.com/400x300/?nairobi,festival',
+      image: '/cultural.jpg',
       title: 'Cultural Festival',
       description: 'Join the vibrant cultural festival celebrating Nairobi\'s heritage.',
     },
     {
-      image: 'https://source.unsplash.com/400x300/?nairobi,conference',
+      image: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300&q=80',
       title: 'Business Conference',
       description: 'Network at the leading business conference in East Africa.',
     },
     {
-      image: 'https://source.unsplash.com/400x300/?nairobi,workshop',
+      image: '/alchemist.jpeg',
       title: 'Innovation Workshop',
       description: 'Participate in workshops on innovation and technology.',
     },

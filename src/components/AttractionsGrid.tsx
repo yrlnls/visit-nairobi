@@ -4,22 +4,22 @@ import AttractionCard from './AttractionCard';
 const AttractionsGrid: React.FC = () => {
   const attractions = [
     {
-      image: 'https://source.unsplash.com/400x300/?nairobi,landmark',
+      image: '/kicc.jpg',
       title: 'Iconic Landmarks',
       description: 'Visit the famous landmarks that define Nairobi\'s skyline.',
     },
     {
-      image: 'https://source.unsplash.com/400x300/?nairobi,national-park',
+      image: '/nationalpark.jpg',
       title: 'National Parks',
       description: 'Explore wildlife and nature in Nairobi\'s national parks.',
     },
     {
-      image: 'https://source.unsplash.com/400x300/?nairobi,museum',
+      image: '/museum.jpg',
       title: 'Cultural Museums',
       description: 'Discover history and culture through Nairobi\'s museums.',
     },
     {
-      image: 'https://source.unsplash.com/400x300/?nairobi,market',
+      image: '/market.jpg',
       title: 'Local Markets',
       description: 'Experience vibrant markets and local crafts.',
     },

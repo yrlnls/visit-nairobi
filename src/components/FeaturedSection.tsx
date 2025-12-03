@@ -4,17 +4,17 @@ import AttractionCard from './AttractionCard';
 const FeaturedSection: React.FC = () => {
   const featuredItems = [
     {
-      image: 'https://source.unsplash.com/400x300/?nairobi,attractions',
+      image: '/nationalpark.jpg',
       title: 'Top Attractions',
       description: 'Discover Nairobi\'s must-see iconic landmarks to hidden gems.',
     },
     {
-      image: 'https://source.unsplash.com/400x300/?nairobi,events',
+      image: '/conference.jpg',
       title: 'Upcoming Events',
       description: 'Stay updated with festivals, conferences, cultural events.',
     },
     {
-      image: 'https://source.unsplash.com/400x300/?nairobi,networking',
+      image: '/cultural.jpg',
       title: 'Connect Insights',
       description: 'Experience diverse culture, thriving business opportunities.',
     },

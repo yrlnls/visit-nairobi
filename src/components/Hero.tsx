@@ -2,7 +2,7 @@ import React from 'react';
 
 const Hero: React.FC = () => {
   return (
-    <section className="relative h-screen bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('https://source.unsplash.com/1600x900/?nairobi,skyline')" }}>
+    <section className="relative h-screen bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('/cultural.jpg')" }}>
       {/* Overlay */}
       <div className="absolute inset-0 bg-dark-bg/80"></div>
       

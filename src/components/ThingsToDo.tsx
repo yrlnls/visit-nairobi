@@ -8,25 +8,25 @@ const ThingsToDo: React.FC = () => {
     {
       title: 'White Water Rafting',
       description: 'Experience the thrill of navigating the rapids on Nairobi\'s rivers with professional guides.',
-      image: 'https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      image: '/whitewaterrafting.jpeg',
       id: 'white-water-rafting'
     },
     {
       title: 'Skydiving',
       description: 'Soar above the city and savannas for an unforgettable adrenaline rush.',
-      image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      image: '/skydiving.jpeg',
       id: 'skydiving'
     },
     {
       title: 'Zip Lining',
       description: 'Glide through the treetops and enjoy stunning views of the landscape.',
-      image: 'https://images.unsplash.com/photo-1560272564-c83b19b38190?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      image: '/ziplining.jpeg',
       id: 'zip-lining'
     },
     {
       title: 'Hot Air Balloon Safari',
       description: 'Witness the wildlife from above in a serene hot air balloon ride at dawn.',
-      image: 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      image: '/hotairbaloon.jpeg',  
       id: 'hot-air-balloon'
     }
   ];

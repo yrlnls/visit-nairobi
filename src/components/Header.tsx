@@ -83,14 +83,22 @@ const Header: React.FC = () => {
             <ul className="space-y-4">
               <li><Link to="/" className="block text-dark-text hover:text-primary-orange transition-colors" onClick={toggleMobileMenu}>Home</Link></li>
               <li>
-                <div 
-                  className="text-dark-text hover:text-primary-orange transition-colors cursor-pointer flex justify-between items-center w-full" 
-                  onClick={() => setIsThingsSubmenuOpen(!isThingsSubmenuOpen)}
-                >
-                  Things to do
-                  <svg className={`w-4 h-4 transition-transform ${isThingsSubmenuOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                  </svg>
+                <div className="flex justify-between items-center w-full">
+                  <Link 
+                    to="/things-to-do" 
+                    className="text-dark-text hover:text-primary-orange transition-colors flex-1" 
+                    onClick={() => { toggleMobileMenu(); setIsThingsSubmenuOpen(false); }}
+                  >
+                    Things to do
+                  </Link>
+                  <button 
+                    className="text-dark-text hover:text-primary-orange transition-colors cursor-pointer ml-2 p-0 border-none bg-transparent" 
+                    onClick={() => setIsThingsSubmenuOpen(!isThingsSubmenuOpen)}
+                  >
+                    <svg className={`w-4 h-4 transition-transform ${isThingsSubmenuOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </button>
                 </div>
                 {isThingsSubmenuOpen && (
                   <ul className="ml-4 mt-2 space-y-2">
@@ -106,14 +114,22 @@ const Header: React.FC = () => {
                 )}
               </li>
               <li>
-                <div 
-                  className="text-dark-text hover:text-primary-orange transition-colors cursor-pointer flex justify-between items-center w-full" 
-                  onClick={() => setIsWhereSubmenuOpen(!isWhereSubmenuOpen)}
-                >
-                  Where to Go
-                  <svg className={`w-4 h-4 transition-transform ${isWhereSubmenuOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                  </svg>
+                <div className="flex justify-between items-center w-full">
+                  <Link 
+                    to="/where-to-go" 
+                    className="text-dark-text hover:text-primary-orange transition-colors flex-1" 
+                    onClick={() => { toggleMobileMenu(); setIsWhereSubmenuOpen(false); }}
+                  >
+                    Where to Go
+                  </Link>
+                  <button 
+                    className="text-dark-text hover:text-primary-orange transition-colors cursor-pointer ml-2 p-0 border-none bg-transparent" 
+                    onClick={() => setIsWhereSubmenuOpen(!isWhereSubmenuOpen)}
+                  >
+                    <svg className={`w-4 h-4 transition-transform ${isWhereSubmenuOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </button>
                 </div>
                 {isWhereSubmenuOpen && (
                   <ul className="ml-4 mt-2 space-y-2">
