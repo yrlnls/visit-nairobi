@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import Header from './Header';
-import Footer from './Footer';
 import AttractionCard from './AttractionCard';
 
 const ListYourBusiness: React.FC = () => {
@@ -285,7 +284,6 @@ const ListYourBusiness: React.FC = () => {
         </div>
       </section>
 
-      <Footer />
     </div>
   );
 };

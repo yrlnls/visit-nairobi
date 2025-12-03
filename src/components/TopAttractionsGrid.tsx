@@ -14,7 +14,7 @@ const TopAttractionsGrid: React.FC = () => {
       description: 'Get up close with Rothschild giraffes and learn about conservation.',
     },
     {
-      image: 'https://source.unsplash.com/400x300/?nairobi,museum',
+      image: '/museum2.jpeg',
       title: 'National Museum of Kenya',
       description: 'Explore Kenya\'s rich history, art, and cultural heritage.',
     },

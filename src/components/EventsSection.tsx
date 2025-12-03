@@ -9,12 +9,12 @@ const EventsSection: React.FC = () => {
       description: 'Join the vibrant cultural festival celebrating Nairobi\'s heritage.',
     },
     {
-      image: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300&q=80',
+      image: '/conference.jpg',
       title: 'Business Conference',
       description: 'Network at the leading business conference in East Africa.',
     },
     {
-      image: '/alchemist.jpeg',
+      image: '/innovation.jpeg',
       title: 'Innovation Workshop',
       description: 'Participate in workshops on innovation and technology.',
     },

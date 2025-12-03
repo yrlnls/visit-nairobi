@@ -1,6 +1,5 @@
 import React from 'react';
 import Header from './Header';
-import Footer from './Footer';
 import AttractionCard from './AttractionCard';
 
 const News: React.FC = () => {
@@ -62,7 +61,7 @@ const News: React.FC = () => {
     <div className="min-h-screen bg-dark-bg text-dark-text">
       <Header />
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center bg-cover bg-center" style={{ backgroundImage: `url('https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')` }}>
+      <section className="relative h-screen flex items-center justify-center bg-cover bg-center" style={{ backgroundImage: `url('/news.jpg')` }}>
         <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
           <div className="text-center text-white px-4">
             <h1 className="text-5xl md:text-6xl font-heading font-bold mb-4">Latest News</h1>
@@ -106,7 +105,6 @@ const News: React.FC = () => {
         </div>
       </section>
 
-      <Footer />
     </div>
   );
 };

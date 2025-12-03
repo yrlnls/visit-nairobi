@@ -14,7 +14,7 @@ const AttractionsGrid: React.FC = () => {
       description: 'Explore wildlife and nature in Nairobi\'s national parks.',
     },
     {
-      image: '/museum.jpg',
+      image: '/museum2.jpeg',
       title: 'Cultural Museums',
       description: 'Discover history and culture through Nairobi\'s museums.',
     },

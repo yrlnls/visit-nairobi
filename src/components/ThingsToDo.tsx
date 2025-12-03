@@ -1,6 +1,4 @@
 import React from 'react';
-import Header from './Header';
-import Footer from './Footer';
 import AttractionCard from './AttractionCard';
 
 const ThingsToDo: React.FC = () => {
@@ -32,8 +30,7 @@ const ThingsToDo: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-dark-bg text-dark-text">
-      <Header />
+    <div className="flex-1 bg-gray-50">
       {/* Hero Section for Things to Do */}
       <section className="relative h-screen flex items-center justify-center bg-cover bg-center" style={{ backgroundImage: `url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')` }}>
         <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
@@ -61,8 +58,6 @@ const ThingsToDo: React.FC = () => {
           </div>
         </div>
       </section>
-
-      <Footer />
     </div>
   );
 };

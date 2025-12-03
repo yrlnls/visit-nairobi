@@ -1,6 +1,5 @@
 import React from 'react';
 import Header from './Header';
-import Footer from './Footer';
 import AttractionCard from './AttractionCard';
 
 const Events: React.FC = () => {
@@ -20,7 +19,7 @@ const Events: React.FC = () => {
     {
       title: 'Cultural Heritage Festival',
       description: 'Nairobi Cultural Heritage Festival 2025, April 20-22, 2025, Uhuru Park. Celebrate Nairobi\'s diverse cultures through music, dance, art exhibitions, and traditional food stalls showcasing Kenya\'s rich heritage.',
-      image: 'https://images.unsplash.com/photo-1578631610676-7e0a8b4e9d0e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+      image : '/cheritage.jpeg',
       id: 'cultural-heritage'
     },
     {
@@ -62,7 +61,7 @@ const Events: React.FC = () => {
     <div className="min-h-screen bg-dark-bg text-dark-text">
       <Header />
       {/* Hero Section for Events */}
-      <section className="relative h-screen flex items-center justify-center bg-cover bg-center" style={{ backgroundImage: `url('https://images.unsplash.com/photo-1519452634762-1d9d7a5b4b0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')` }}>
+      <section className="relative h-screen flex items-center justify-center bg-cover bg-center" style={{ backgroundImage: `url('/events.jpg')` }}>
         <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
           <div className="text-center text-white px-4">
             <h1 className="text-5xl md:text-6xl font-heading font-bold mb-4">Events</h1>
@@ -106,7 +105,6 @@ const Events: React.FC = () => {
         </div>
       </section>
 
-      <Footer />
     </div>
   );
 };

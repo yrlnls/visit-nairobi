@@ -1,6 +1,5 @@
 import React from 'react';
 import Header from './Header';
-import Footer from './Footer';
 import AttractionCard from './AttractionCard';
 
 const WhereToGo: React.FC = () => {
@@ -23,7 +22,7 @@ const WhereToGo: React.FC = () => {
     {
       title: 'Motown Bar',
       description: 'Nairobi\'s newest hidden gem.',
-      image: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+      image: 'motown.jpeg',
       id: 'motown-bar'
     },
     {
@@ -44,7 +43,7 @@ const WhereToGo: React.FC = () => {
     {
       title: 'The Alchemist',
       description: 'Based right in the heart of Nairobi City, the best food.',
-      image: 'https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+      image: '/alchemist.jpeg',
       id: 'the-alchemist'
     },
     {
@@ -56,7 +55,7 @@ const WhereToGo: React.FC = () => {
     {
       title: '270° Rooftop',
       description: 'Rooftop standout dining destination unique in Nairobi.',
-      image: 'https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+      image:'/270rooftop.jpeg',
       id: '270-rooftop'
     }
   ];
@@ -129,7 +128,6 @@ const WhereToGo: React.FC = () => {
         </div>
       </section>
 
-      <Footer />
     </div>
   );
 };
